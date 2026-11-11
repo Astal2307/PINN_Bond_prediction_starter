@@ -18,21 +18,35 @@
 
 ## Установка и запуск
 
-Нужен Python 3.9–3.12.
+Нужен Python 3.9–3.12. Если команда `python` не находится, используйте `python3` или `py`.
 
-```bash
+Создать окружение (один раз):
+
+```
 python -m venv .venv
 ```
 
-```bash
-source .venv/bin/activate
-```
+Активировать окружение (в каждом новом окне терминала):
+- в bash и zsh:
 
-```bash
+  ```
+  source .venv/bin/activate
+  ```
+- в cmd и PowerShell:
+
+  ```
+  .venv\Scripts\activate
+  ```
+
+  Если PowerShell пишет, что выполнение сценариев отключено, активируйте окружение в cmd.
+
+Установить зависимости (один раз) и запустить бейзлайн:
+
+```
 pip install -r baseline/requirements.txt
 ```
 
-```bash
+```
 python -m baseline.run --data data/ --out out/
 ```
 
